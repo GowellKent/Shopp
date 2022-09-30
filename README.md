@@ -1,4 +1,4 @@
-# kulineran
+# Shopp
 
 ## Project setup
 ```

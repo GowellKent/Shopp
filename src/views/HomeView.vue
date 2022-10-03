@@ -2,7 +2,10 @@
   <div class="home">
     <Navbb />
     <div class="container">
-      <HerBan />
+      <div class="mb-2">
+        <HerBan />
+      </div>
+
       <div class="row mt-4">
         <div class="col">
           <h2><strong>Best</strong> Sellers</h2>
@@ -16,13 +19,7 @@
 
       <div class="row mb-3">
         <div class="col-md-4 mt-4" v-for="product in products" :key="product.id">
-          <CardProduct :product="product"/>
-        </div>
-        <div class="col-md-4 mt-4">
-          <h2>item2</h2>
-        </div>
-        <div class="col-md-4 mt-4">
-          <h2>itme3</h2>
+          <CardProduct :product="product" />
         </div>
       </div>
 
@@ -51,20 +48,14 @@ export default {
     }
   },
   methods: {
-    setProduct(data) {
+    setProducts(data) {
       this.products = data
     }
   },
   mounted() {
     axios.get('http://localhost:3000/best-products')
-      .then(function (response) {
-        // handle success
-        this.setProduct(response.data)
-      })
-      .catch(function (error) {
-        // handle error
-        console.log("Gagal ", error);
-      })
+      .then((response) => this.setProducts(response.data))
+      .catch((error) => console.log(error))
   }
 }
 </script>

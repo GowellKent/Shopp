@@ -2,7 +2,7 @@
     <div class="hero">
         <!-- Desktop -->
         <div class="d-none d-md-block">
-            <div class="row mt-4">
+            <div class="row mt-4 mb-2">
                 <div class="col-md">
                     <div class="d-flex h-100">
                         <div class="justify-content-center align-self-center">
@@ -24,7 +24,7 @@
 
         <!-- Mobile -->
         <div class="d-sm-block d-md-none">
-            <div class="row mt-4">
+            <div class="row mt-4 mb-2">
                 <div class="col-md mb-3">
                     <img src="@/assets/images/undraw_shopping_app_flsj.png" alt="@/assets/images/default.png"
                         width="100%">
